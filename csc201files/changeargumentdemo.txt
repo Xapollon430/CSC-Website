@@ -1,0 +1,99 @@
+import java.util.Scanner;
+
+public class ChangeArgumentDemo
+{
+	
+	public static void main(String[] args)
+	{//*** create two arrays one of type Bottle and one of type int.
+		Bottle[] bottleArray = new Bottle[3];
+		int [] integerArray = new int[3];
+		System.out.println("Read the bottle array. " );
+		readBottleArray(bottleArray);
+		System.out.println("Values of bottleArray are:" );
+		printBottleArray(bottleArray);
+		System.out.println("Read the integer array. " );
+		readIntegerArray(integerArray);
+		System.out.println("Values of integerArray are: " );
+		printIntegerArray(integerArray);
+		System.out.println("Send each bottle one at a time to " +
+						"method changeBottleValue(). " );
+		for(int x = 0; x < bottleArray.length; x++)
+		{//*** address of a Bottle is stored at memory location x
+			//*** see method 
+			changeBottleValue(bottleArray[x]);
+		}
+		System.out.println("Values of bottleArray[] are: " );
+		printBottleArray(bottleArray);
+		System.out.println("Send each integer one at a time to " +
+						" method changeIntegerValue()." );
+		for(int x = 0; x < integerArray.length; x++)
+		{	//*** integer value stored at memory location x
+			//*** see method
+			changeIntegerValue(integerArray[x]);
+		}
+		System.out.println("Values of integerArray[] are: " );
+		printIntegerArray(integerArray);
+		System.out.println("Pass array of integers and change them. " );
+		changeIntegerArray(integerArray);
+		System.out.println("Values of integerArray[] are: " );
+		printIntegerArray(integerArray);
+		
+	}//main
+	private static void changeIntegerArray(int[] integerArray)
+	{
+		for(int x = 0; x < integerArray.length; x++)
+		{	//*** integer value stored at memory location x
+			//*** see method
+			integerArray[x] = integerArray[x] * 2;
+		}
+		
+	}
+	public static void readBottleArray(Bottle[] array)
+	{
+		System.out.println("This array has " + array.length + " elements.");
+		Bottle t1;
+		for(int x = 0; x < array.length; x++)
+		{
+			t1 = new Bottle();
+			t1.read();
+			array[x] = t1;
+		}
+		
+	}
+	//*** address of argument is copied to local Bottle b.
+	private static void changeBottleValue(Bottle b)
+	{//*** Bottle b has its value doubled
+		b.setNumUnits(b.getNumUnits() * 2);
+	//*** Bottle b goes out of scope
+	}
+	private static void printBottleArray(Bottle[] bottleArray)
+	{
+		for(int x = 0; x < bottleArray.length; x++)
+		{
+			System.out.print("bottle value [" + x + "] is ");
+			System.out.println(bottleArray[x] );
+		}
+	}
+	private static void readIntegerArray(int[]integerArray)
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.println("This array has " + integerArray.length + " elements.");
+		for(int x = 0; x < integerArray.length; x++)
+		{
+			integerArray[x] = scan.nextInt();
+		}
+	}//*** local integer i is created 
+	private static void changeIntegerValue(int i)
+	{//*** int i is doubled
+		i = i * 2;
+	//*** i goes out of scope when method is finished.
+	}
+	private static void printIntegerArray(int[] integerArray)
+	{
+		for(int x = 0; x < integerArray.length; x++)
+		{
+			System.out.print("integer value [" + x + "] is ");
+			System.out.println(integerArray[x] );
+		}
+	}
+}

@@ -1,0 +1,183 @@
+//import java.io.PrintWriter;
+import java.util.Scanner;
+public class CreateExhibition
+{
+    public static void main(String[] args)
+    {
+		Curator  exhibition = new Curator();
+		System.out.println("exhibition?");
+		while("yes")
+		{
+			String theExhibitionList = exhibition.paintingsChosen();
+			System.out.println(theExhibitionList);
+			System.out.println("a new exhibition?");
+		}
+    }
+}
+import java.util.ArrayList;
+public class Curator
+{
+	Declare Museums
+	Museum nationalGallery = null
+	String theExhibitionList
+	private ArrayList<Museum> museumsUsed = new ArrayList<Museum>();
+	private ArrayList<Painting> paintingsFromOneMuseumArray = new 	
+    private ArrayList<Painting> exhibitionPaintingsArray = new 
+	
+    public Curator()
+	{	
+		Give museums memory
+		nationalGallery = new Museum("National Gallery",
+"nationalGallery.txt")								
+
+	}
+	
+	public String paintingsChosen()
+	{
+		getMuseumsForTheExhibition();
+		topicSelection = selectTopic();
+		String paintingList = null;
+		switch (topicSelection)
+		{
+		case 1:// painter
+			String painter = getPainter();
+			paintingList = painter(painter, museumsUsed);
+			break;
+		}// switch
+		return theExhibitionList + paintingList;
+	}
+	private void getMuseumsForTheExhibition()
+	{
+		museumsUsed = new ArrayList<Museum>();
+		display museum choices
+		read choices		
+       fill museumsUsed
+	}
+	private int selectTopic()
+	{	}
+	private String getPainter()
+	{	}
+	
+	
+	private String painter(String paintersName, ArrayList<Museum> museumArray)
+	{
+		exhibitionPaintingArray.clear();
+        for(Museum museum: museumArray)
+		{//*** ask each museum to give a list that satisfies the requested painter.
+				
+		paintingsFromOneMuseumArray.clear();
+		//*** then from each museum put them in an ArrayList
+       paintingsFromOneMuseumArray= museum.painter(painterName);
+			
+			
+			//*** Add them to exhibitionPaintingsArray.
+			For(Painting p: paintingsFromOneMuseumArray)
+       			exhibigtionPaintingArray.add();
+		}//for
+	}
+		
+	}
+private String createPaintingListFromExhibitionPaintingArray(String paintingListSoFar)
+	{	}
+}
+import java.util.ArrayList;
+public class Museum
+{
+	private String museum;
+	private ArrayList<Painting> paintingArray = new ArrayList<Painting>();
+	public Museum(String museumName, String paintingFile)
+	{	
+	Scanner scanMuseumFile = TextFileIO.createTextRead(paintingFile);
+		readFile(scanMuseumFile);
+		scanMuseumFile.close();
+	}
+	public void readFile(Scanner read)
+	{	}
+//*** The Museum class can return an ArrayList of paintings ***
+//*** given the choice from the client.
+	public ArrayList<Painting> genre(String genre)
+	{	}
+	public ArrayList<Painting> country(String desiredCountry)
+	{	}
+	public ArrayList<Painting> datePainted(int start, int end)
+	{	}
+	public ArrayList<Painting> painter(String paintersName)
+	{	}
+	public ArrayList<Painting> size(double start, double end)
+	{	}
+	public ArrayList<Painting> medium(String desiredMedium)
+	{	}
+	public String toString()
+	{	}
+}
+public class Painting
+{
+	public void readPainting(Scanner read)
+	{	}
+    Get and set methods.
+	public String toString()
+	{	}
+}
+import java.util.ArrayList;
+import java.util.Scanner;
+public class ArrayListDemo
+{
+	public static void main(String[] args)
+	{
+		ArrayList<Fraction> fracArray = new ArrayList<Fraction>();
+		ArrayList<Bottle> bottleArray = new ArrayList<Bottle>();
+		Bottle b = new Bottle(3);
+		fracArray.add(new Fraction(1,2));
+		fracArray.add(new Fraction(1,3));
+		fracArray.add(new Fraction(1,5));
+		fracArray.add(new Fraction(1,6));
+		bottleArray.add(new Bottle(2));
+		bottleArray.add(b);
+		String fractions = "";
+		for(Fraction fraction: fracArray)
+		{
+			fractions = fractions + fraction.toString() + "\n";
+		}
+		System.out.println("first array\n" + fractions);
+		fracArray.clear();
+		fracArray = practice(bottleArray);
+		fractions = "";
+		for(Fraction fraction: fracArray)
+		{
+			fractions = fractions + fraction.toString() + "\n";
+		}
+		System.out.println("second array\n" + fractions);
+		readString();
+	}
+
+	private static ArrayList<Fraction> practice(ArrayList<Bottle> bottleArray)
+	{
+		ArrayList<Fraction> fracArray = new ArrayList<Fraction>();
+		int num, den;
+		Fraction f;
+		for(Bottle bottle: bottleArray)
+		{
+			num = bottle.getNumUnits();
+			den = num + 2;
+			f = new Fraction(num, den);
+			fracArray.add(f);
+		}
+		return fracArray;
+	}
+	private static void readString()
+	{
+		String example ="1  5 14 9";	
+		Scanner scanLine = new Scanner(example);
+		while(scanLine.hasNextInt())
+		{
+			int choice = scanLine.nextInt();
+			System.out.println("choice is " + choice);
+		}
+	}
+}
+
+
+
+1
+
+

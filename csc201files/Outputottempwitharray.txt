@@ -1,0 +1,47 @@
+You will be asked to fill 3 randomly sized arrays.
+
+This array has 1 temperature(s).
+please enter a temperature in this form 45 C
+300 c
+The values of temperature array one are 
+300.0C
+The average of temperature array one is 300.0C
+
+This array has 4 temperature(s).
+please enter a temperature in this form 45 C
+122 f
+please enter a temperature in this form 45 C
+0 c
+please enter a temperature in this form 45 C
+100 c
+please enter a temperature in this form 45 C
+50 c
+The values of temperature array two are 
+122.0F, 0.0C, 100.0C, 50.0C
+The average of temperature array two is 122.0F
+
+This array has 3 temperature(s).
+please enter a temperature in this form 45 C
+212 f
+please enter a temperature in this form 45 C
+50 c
+please enter a temperature in this form 45 C
+32 f
+The values of temperature array three are 
+212.0F, 50.0C, 32.0F
+The average of temperature array three is 122.0F
+
+Here are the temperatures in the three arrays:
+300.0C
+122.0F, 0.0C, 100.0C, 50.0C
+212.0F, 50.0C, 32.0F
+
+An array with the largest values taken from the
+3 arrays has 4 elements.
+This solution knew the largest array of the three arrays:
+300.0C, 50.0C, 100.0C, 50.0C
+
+An array with the largest values taken from the
+3 arrays has 4 elements.
+This solution knew the largest size of the three arrays:
+300.0C, 50.0C, 100.0C, 50.0C

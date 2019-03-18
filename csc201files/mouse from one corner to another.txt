@@ -1,0 +1,72 @@
+              This program finds a path for a mouse from one corner to another
+              in a two dimensional maze.
+              Please enter the size of the maze.
+              How many rows would you like?
+10
+              How many columns would you like?
+10
+It took 531,044 attempts to find a path.
+The cat got the mouse 17,851 times.
+The mouse fell off the maze 156,253 times.
+The mouse went backwards 348,632 times.
+The mouse went to a former move 8,308 times.
+  1  0  C  C  0  0  0  0  0  0
+  0  2  C  C  0  0  0  0  0  0
+  0  3  0  0  0  0  0  0  0  0
+  0  0  4  0  0  0  0  0  0  0
+  0  0  0  5  0  0  0  0  0  0
+  0  0  0  0  6  7  0  0  0  0
+  0  0  0  0  0  8  0  0  0  0
+  0  0  0  0  0  0  9 10  0  0
+  0  0  0  0  0  0  0  0 11  0
+  0  0  0  0  0  0  0  0  0 12
+              Please enter the size of the maze.
+              How many rows would you like?
+12
+              How many columns would you like?
+14
+It took 1,514,074 attempts to find a path.
+The cat got the mouse 30,672 times.
+The mouse fell off the maze 448,204 times.
+The mouse went backwards 1,010,303 times.
+The mouse went to a former move 24,895 times.
+  1  2  3  0  0  0  0  0  0  0  0  0  0  0
+  0  0  0  4  0  0  0  0  0  0  C  C  0  0
+  0  0  5  0  0  0  0  0  0  0  C  C  0  0
+  0  0  0  6  0  0  0  0  0  0  0  0  0  0
+  0  0  0  7  0  0  0  0  0  0  0  0  0  0
+  0  0  0  0  8  0  0  0  0  0  0  0  0  0
+  0  0  0  0  9  0  0  0  0  0  0  0  0  0
+  0  0  0  0  0 10  0  0  0  0  0  0  0  0
+  0  0  0  0  0  0 11  0  0 14  0  0  0  0
+  0  0  0  0  0  0  0 12 13  0 15 16  0  0
+  0  0  0  0  0  0  0  0  0  0  0  0 17  0
+  0  0  0  0  0  0  0  0  0  0  0  0  0 18
+              Please enter the size of the maze.
+              How many rows would you like?
+15
+              How many columns would you like?
+15
+It took 227,752,843 attempts to find a path.
+The cat got the mouse 3,480,845 times.
+The mouse fell off the maze 67,539,037 times.
+The mouse went backwards 152,946,887 times.
+The mouse went to a former move 3,786,074 times.
+  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+  0  3  0  0  0  0  0  0  0  0  0  0  0  0  0
+  4  0  6  8  0  0  0  0  0  0  0  0  0  0  0
+  0  5  7  0  9  0  0  0  0  0  0  0  0  0  0
+  0  0  0  0  0 10 11  0  0  0  0  0  0  0  0
+  0  0  0  0  0  0  0 12 13  0  0  0  0  0  0
+  0  0  0  0  0  0  0  0 14  0  0  0  0  0  0
+  0  0  0  0  0  0  0  0  0 15  0  0  0  0  0
+  C  C  0  0  0  0  0  0  0  0 16  0  0  0  0
+  C  C  0  0  0  0  0  0  0  0 17  0  0  0  0
+  0  0  0  0  0  0  0  0  0  0  0 18  0  0  0
+  0  0  0  0  0  0  0  0  0  0  0  0 19  0  0
+  0  0  0  0  0  0  0  0  0  0  0  0  0 20  0
+  0  0  0  0  0  0  0  0  0  0  0  0  0  0 21
+              Please enter the size of the maze.
+              How many rows would you like?
+

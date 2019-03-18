@@ -1,0 +1,106 @@
+public class FractionDemo
+{
+	public static void main (String[] args)
+	{
+		Fraction f1 = new Fraction (1, 2);
+		Fraction f2 = new Fraction (2, 3);
+		Fraction f3, f4, f5, f6, f7;
+		System.out.println ("First Fraction number: " + f1);
+		System.out.println ("Second Fraction number: " + f2);
+		if (f1.equals(f2))
+			System.out.println ("f1 and f2 are equal.");
+		else
+			System.out.println ("f1 and f2 are NOT equal.");
+		f3 = f2.reciprocal();
+		System.out.println ("The reciprocal of f2 is: " + f3);
+		System.out.println ("multiplying f1 times -4 is "
+				+ f1.multiply(-4));
+		System.out.println ("dividing f1 by -4 is "
+				+ f1.divide(-4));
+		System.out.println ("adding  -2 to f1 is "
+				+ f1.add(-2));
+		f4 = f1.add(f2);
+		f5 = f1.subtract(f2);
+		f6 = f1.multiply(f2);
+		f7 = f1.divide(f2);
+		System.out.println ("f1 + f2: " + f4);
+		System.out.println ("f1 - f2: " + f5);
+		System.out.println ("f1 * f2: " + f6);
+		System.out.println ("f1 / f2: " + f7);
+		System.out.println("\nUsing the integers 1, 5 as parameters"
+				+ "we get:");
+		f4 = f1.add(1,5);
+		f5 = f1.subtract(1,5);
+		f6 = f1.multiply(1,5);
+		f7 = f1.divide(1,5);
+		System.out.println ("f1 + Fraction with 1,5 as parameters: " + f4);
+		System.out.println ("f1 - Fraction with 1,5 as parameters: " + f5);
+		System.out.println ("f1 * Fraction with 1,5 as parameters: " + f6);
+		System.out.println ("f1 / Fraction with 1,5 as parameters: " + f7);
+		System.out.println("The program will now create 3 arrays\n"
+				+ "of random sizes and prompt for values.");
+		Fraction[] fractionArrayOne;
+		Fraction[] fractionArrayTwo;
+		Fraction[] fractionArrayThree;
+
+		fractionArrayOne = new Fraction[getRandomArraySize()];
+		System.out.println("Read the first array. " );
+		readFractionArray(fractionArrayOne);
+		System.out.println("The fractions in the first array are: " );
+		printFractioArray(fractionArrayOne);
+		f7 = getAverage(fractionArrayOne);
+		System.out.println("The average of Fraction array one is " + f7);
+
+		fractionArrayTwo = new Fraction[getRandomArraySize()];
+		System.out.println("Read the second array. " );
+		readFractionArray(fractionArrayTwo);
+		System.out.println("The fractions in the second array are: " );
+		printFractioArray(fractionArrayTwo);
+		f7 = getAverage(fractionArrayTwo);
+		System.out.println("The average of Fraction array two is " + f7);
+
+		fractionArrayThree = new Fraction[getRandomArraySize()];
+		System.out.println("Read the third array. " );
+		readFractionArray(fractionArrayThree);
+		System.out.println("The fractions in the third array are: " );
+		printFractioArray(fractionArrayThree);
+		f7 = getAverage(fractionArrayThree);
+		System.out.println("The average of Fraction array three is " + f7);
+
+		System.out.println("The three arrays are" );
+		printFractioArray(fractionArrayOne);
+		printFractioArray(fractionArrayTwo);
+		printFractioArray(fractionArrayThree);
+		//*********************************************************************
+		// I solved the problem of creating an array of the largest values
+		// two different ways. You may choose either algorithm. The first way follows:
+		//*********************************************************************
+		Fraction[] largest = getLargestArray(fractionArrayOne, fractionArrayTwo,
+				fractionArrayThree);
+		Fraction[] arrayWithLargestValues1;
+		if(fractionArrayOne == largest)
+			arrayWithLargestValues1 = createArrayWithLargestValues(largest,
+					fractionArrayTwo, fractionArrayThree);
+		else if(fractionArrayTwo == largest)
+			arrayWithLargestValues1 = createArrayWithLargestValues(largest,
+					fractionArrayOne, fractionArrayThree);
+		else// fractionArrayThree is largest
+			arrayWithLargestValues1 = createArrayWithLargestValues(largest,
+					fractionArrayOne, fractionArrayTwo);
+		System.out.println("\nThe solution knowing the largest array:");
+		System.out.println("An array with the largest values taken from the\n"+
+				"3 arrays has " + arrayWithLargestValues1.length + " elements.");
+		printFractioArray(arrayWithLargestValues1);
+		//*********************************************************************
+		// I solved the problem of creating an array of the largest values
+		// two different ways.  You may choose either algorithm. The second way follows:
+		//*********************************************************************
+		int sizeOfLargestArray = getSizezOfLargestArray(fractionArrayOne, fractionArrayTwo,
+				fractionArrayThree);
+		Fraction[] arrayWithLargestValues = createArrayWithLargestValues(sizeOfLargestArray, 
+				fractionArrayOne,fractionArrayTwo, fractionArrayThree);
+		System.out.println("\nThe solution knowing the largest size of the three arrays:");
+		System.out.println("An array with the largest values taken from the\n"+
+				"3 arrays has " + arrayWithLargestValues.length + " elements.");
+		printFractioArray(arrayWithLargestValues);
+	}//main

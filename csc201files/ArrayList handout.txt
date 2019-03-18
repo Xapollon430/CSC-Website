@@ -1,0 +1,117 @@
+ArrayList
+Found as import java.util.ArrayList;
+Properties of array lists
+1) Ordered by position (like array).
+2) Elements accessed and replaced at a given position (like array.)
+3) Position numbering range from 0 to size minus 1 (like array.)
+4) Use methods to manipulate elements (array uses [ ].)
+5) Array list knows it’s logical size (number of elements in the array list) 
+6) Array list knows its physical size (number of cells currently available for storage.)
+7) Logical size is 0 when array list is created.  As elements are added or removed the array list automatically maintains the current number of elements.
+8) The physical size (capacity) is automatically maintained. 
+9) Array list cannot hold primitive types such as int and double.
+10)  Java  encourages programmers to use generic array lists.  
+a) Generic array lists require the programmer to specify the element type when the array list is declared and instantiated.
+       b)  Example: ArrayList<String> myList = new ArrayList<String>();
+       1) myList contains only String elements
+       2) No initial length is specified.  Java assigns a default capacity
+documentation for ArrayList
+Constructor Summary 
+ArrayList<E>()  Constructs an empty list with an initial capacity of ten. 
+ArrayList(Collection<? extends E> c) Constructs a list containing the elements of the specified collection, in the order they are returned by the collection's iterator. 
+ArrayList< E >(int initialCapacity)  Constructs an empty list with the specified initial capacity. 
+  Method Summary 
+ boolean add(E elem)  Appends the specified element to the end of this list. 
+ void add(int index, E elem)  Inserts the specified element at the specified position in this list. 
+ boolean addAll(Collection<? extends E> c)  Appends all of the elements in the specified Collection to the end of this list, in the order that they are returned by the specified Collection's Iterator. 
+ boolean addAll(int index, Collection<? extends E> c)  Inserts all of the elements in the specified Collection into this list, starting at the specified position. 
+ void clear()  Removes all of the elements from this list. 
+ Object clone()  Returns a shallow copy of this ArrayList instance. 
+ boolean contains(E elem)  Returns true if this list contains the specified element. 
+ void ensureCapacity(int minCapacity)  Increases the capacity of this ArrayList instance, if necessary, to ensure that it can hold at least the number of elements specified by the minimum capacity argument. 
+ E get(int index)   Returns the element at the specified position in this list. 
+ int indexOf(E elem)  Searches for the first occurrence of the given argument, testing for equality using the equals method. 
+ boolean isEmpty() Tests if this list has no elements. 
+ int lastIndexOf(E elem)  Returns the index of the last occurrence of the specified object in this list. 
+ E remove(int index)  Removes the element at the specified position in this list. 
+ boolean remove(E elem)  Removes a single instance of the specified element from this list, if it is present (optional operation). 
+protected  void removeRange(int fromIndex, int toIndex)  Removes from this List all of the elements whose index is between fromIndex, inclusive and toIndex, exclusive. 
+ E set(int index, E elem)  Replaces the element at the specified position in this list with the specified element. 
+ int size()  Returns the number of elements in this list. 
+ Object[] toArray()   Returns an array containing all of the elements in this list in the correct order. 
+<T> T[]  toArray(T[] a)   Returns an array containing all of the elements in this list in the correct order; the runtime type of the returned array is that of the specified array. 
+ void trimToSize() Trims the capacity of this ArrayList instance to be the list's current size. 
+
+Sample program using ArrayList class that manipulates Strings.
+
+  import java.util.ArrayList;
+public class ArrayListOfStrings {
+	public static void main(String[] args)
+	{
+		String string;
+		ArrayList<String> list = new ArrayList<String>();
+		for(int i = 0; i < 4; i++)
+			list.add(i, "s"+ i);
+		for(int i = 0; i < list.size(); i++)
+			System.out.println(list.get(i));
+// below is the enhanced for loop. To use it one must declare an instance of the ArrayList type, 
+// in this case a String, the enhanced for loop then iterates automatically thorough the entire data
+//  structure
+		for(String str : list) 
+			System.out.println(str);
+		System.out.println(list.indexOf("s2"));
+		System.out.println(list.indexOf("s4"));
+		while(!list.isEmpty())
+		{
+			string = list.remove(0);
+			System.out.println("we remove " + string);
+			System.out.println("list size is now" + list.size());
+		}
+	}
+}
+
+
+
+
+/** Second example of ArrayList.  Here we store integers.  ArrayLists can only store objects not primitive types. This is indicated in the declaration ArrayList<Integer> list1 which creates an ArrayList of the wrapper class Integer.  This indicates that an ArrayList cannot hold the primitive type int directly but must instead store instances of its wrapper class Integer.  Starting with Java 5, the primitive types such as int can be more easily stored in an ArrayList because Java automatically “boxes” and “unboxes” them from their respective wrapper class containers.  In the following example the first item inserted into list1 is an Integer created by the Integer wrapper class explicit constructor.  All other operations are done with objects of int using the new automatic boxing and unboxing which hides the underlying Integer wrapper class storage.*/
+import java.util.*;// gives ArrayList and List
+public class ArrayListExample {
+       public static void main(String[] args){
+	ArrayList<Integer> list1 = new ArrayList<Integer>();
+	list1.add(new Integer(4));// using Integer constructor
+	list1.add(5);// using automatic boxing and unboxing
+	list1.add(6);
+	list1.add(4);
+	ArrayList<Integer> list2 = new ArrayList<Integer>();
+	list2.add(3);
+	list2.add(4);
+	System.out.println("0) list1 is " + list1);
+      	// calls toString method of list1
+	System.out.println("1) list2 is " + list2);
+	list1.removeAll(list2);	//[4,5,6,4] and [3,4] ==> [5, 6]
+	System.out.println("2)take list2 from list1, list1 is " + list1);
+	list1.add(0,3);
+	list1.add(10);
+       System.out.println("3) insert 3 at front and 10 at end " + list1);
+	list1.retainAll(list2);	//[3,5,6,10] and[3,4] ==> [3]
+	System.out.println("4) list1 is " + list1);
+	System.out.println("4.5) list1 size is " + list1.size());
+	list1.add(0, 5);
+	list1.add(6);
+	list1.addAll(list2);//[5,3,6] and [3,4] ==> [5,3,6,3,4]
+	System.out.println("5) list1 is " + list1);
+	List list3 = list1.subList(2,4);
+       // list3 from list class, ArrayList is a list. list3 points
+       // to part of list1 , they now share memory
+	System.out.println("6) list3 is " + list3);//[6,3]
+	list1.set(3,10);//update list1 and list3
+	System.out.println("7) list1 is " + list1); //[5,3,6,10,4]
+	System.out.println("8) list3 is " + list3); //[6,10]
+	list3.clear();
+	System.out.println("9) list1 is " + list1);//[5,3,4]
+	System.out.println("10) list3 is " + list3);//[]
+	}
+}
+2
+
+

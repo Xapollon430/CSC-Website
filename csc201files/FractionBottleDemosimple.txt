@@ -1,0 +1,25 @@
+public class FractionBottleDemoSimple
+{
+
+	
+	public static void main (String[] args)
+	{
+		FractionBottle fb1 = new FractionBottle (10, 1, 2);
+		FractionBottle fb2 = new FractionBottle (5, 2, 3);
+		FractionBottle fb3, fb4, fb5, fb6, fb7;
+		System.out.println ("First FractionBottle number: " + fb1);
+		System.out.println ("Second FractionBottle number: " + fb2);
+		if (fb1.equals(fb2))
+			System.out.println ("fb1 and fb2 are equal.");
+		else
+			System.out.println ("fb1 and fb2 are NOT equal.");
+		fb4 = fb1.add(fb2);
+		fb5 = fb1.subtract(fb2);
+		fb6 = fb1.multiply(fb2);
+		fb7 = fb1.divide(fb2);
+		System.out.println ("f1 + f2: " + fb4);
+		System.out.println ("f1 - f2: " + fb5);
+		System.out.println ("f1 * f2: " + fb6);
+		System.out.println ("f1 / f2: " + fb7);
+	}
+}

@@ -1,0 +1,11 @@
+122.0F to Celcius is 50.0C
+Temp1 is 100.0C
+Temp1 to Kalvin is 373.15K
+These two temperatures are equal
+tempAve is 50.0C
+temp1 is 373.15K
+temp2 is 122.0F
+temp3 is 32.0F
+temp4 is 100.0C
+The average temperature is 60.0C
+Subtracting 150.0K from 100.0C gives 223.14999999999998C

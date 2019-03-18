@@ -1,0 +1,86 @@
+First Fraction number: 1/2
+Second Fraction number: 2/3
+f1 and f2 are NOT equal.
+The reciprocal of f2 is: 3/2
+multiplying f1 times -4 is -2/1
+dividing f1 by -4 is -1/8
+adding  -2 to f1 is -3/2
+f1 + f2: 7/6
+f1 - f2: -1/6
+f1 * f2: 1/3
+f1 / f2: 3/4
+The program will now create 3 arrays
+of random sizes and prompt for values.
+Read the first array. 
+This array has 5 elements.
+For cell number 1
+Please enter a number for numerator:
+1
+Please enter a number for denominator:
+4
+For cell number 2
+Please enter a number for numerator:
+1
+Please enter a number for denominator:
+8
+For cell number 3
+Please enter a number for numerator:
+3
+Please enter a number for denominator:
+4
+For cell number 4
+Please enter a number for numerator:
+1
+Please enter a number for denominator:
+2
+For cell number 5
+Please enter a number for numerator:
+7
+Please enter a number for denominator:
+8
+The fractions in the first array are: 
+1/4, 1/8, 3/4, 1/2, 7/8
+The average of Fraction array one is 1/2
+Read the second array. 
+This array has 2 elements.
+For cell number 1
+Please enter a number for numerator:
+5
+Please enter a number for denominator:
+8
+For cell number 2
+Please enter a number for numerator:
+1
+Please enter a number for denominator:
+8
+The fractions in the second array are: 
+5/8, 1/8
+The average of Fraction array two is 3/8
+Read the third array. 
+This array has 3 elements.
+For cell number 1
+Please enter a number for numerator:
+5
+Please enter a number for denominator:
+6
+For cell number 2
+Please enter a number for numerator:
+1
+Please enter a number for denominator:
+4
+For cell number 3
+Please enter a number for numerator:
+1
+Please enter a number for denominator:
+6
+The fractions in the third array are: 
+5/6, 1/4, 1/6
+The average of Fraction array three is 5/12
+The three arrays are
+1/4, 1/8, 3/4, 1/2, 7/8
+5/8, 1/8
+5/6, 1/4, 1/6
+
+An array with the largest values taken from the
+3 arrays has 5 elements.
+5/6, 1/4, 3/4, 1/2, 7/8

@@ -1,0 +1,72 @@
+import java.util.Scanner;
+public class Name
+{
+	private String firstName;
+	private String middleName;
+	private String lastName;
+	public void readName( )
+	{
+		Scanner keyboard = new Scanner(System.in);
+		System.out.println("What is the first name?");
+		firstName = keyboard.nextLine( );
+		System.out.println("What is the middle name?");
+		middleName = keyboard.nextLine( );
+		System.out.println("What is the last name?");
+		lastName = keyboard.nextLine( );
+	}
+	public String getFirstName( )
+	{
+		return firstName;
+	}
+	public String getMiddleName( )
+	{ return middleName;
+	}
+	public String getLastName( )
+	{
+		return lastName;
+	}
+	public void setName(String firstName, String middleName, String lastName)
+	{
+		this.firstName = firstName;
+		this.middleName = middleName;
+		this.lastName = lastName;
+	}
+	public void setName(Name n)
+	{
+		this.firstName = n.firstName;
+		this.middleName = n.middleName;
+		this.lastName = n.lastName;
+	}
+	public void setFirstName(String firstName )
+	{
+		this.firstName = firstName;
+	}
+	public void setMiddleName(String middleName )
+	{
+		this.middleName = middleName;
+	}
+	public void setLastName(String lastName )
+	{
+		this.lastName = lastName;
+	}
+	
+	public Name add(Name other)
+	{
+		Name answer = new Name();
+		answer.firstName = other.firstName;
+		answer.middleName = other.middleName;
+		answer.lastName = this.lastName + "-" + other.lastName;
+		return answer;
+	}
+	
+	public String toString()
+	{
+		return firstName + " " + middleName + " " + lastName;
+	}
+	public boolean equals(Name n)
+	{
+		return this.firstName.equalsIgnoreCase(n.firstName)
+		&& this.middleName.equalsIgnoreCase(n.middleName)
+		&& this.lastName.equalsIgnoreCase(n.lastName);
+	}
+}

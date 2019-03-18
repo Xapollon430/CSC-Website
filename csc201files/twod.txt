@@ -1,0 +1,54 @@
+
+import java.util.Scanner;
+public class TwoDimensionalArray
+{
+	static Scanner scan = new  Scanner(System.in);
+	public static void main(String[] args)
+	{
+		int rowNumber,
+		collumnNumber;
+		String choice = "yes";
+		System.out.println("          This program fills a two dimensional array and prints it out");
+		System.out.println("          in a two dimensional array.");
+		while(choice.equalsIgnoreCase("yes"))
+		{
+			System.out.println("          Please enter the number of rows you would like in");
+			System.out.println("          in the two dimensional array.");
+			rowNumber = scan.nextInt();
+			System.out.println("          Please enter the number of collumns you would like in");
+			System.out.println("          the two dimensional array.");
+			collumnNumber = scan.nextInt();
+			int[][] array = new int[rowNumber][collumnNumber];
+			//*** these two for loops fill the array 
+			int move = 1;
+			for(int k = 0; k < rowNumber; k++)
+			{
+				for(int j = 0; j < collumnNumber; j++)
+				{
+					array[k][j]  = move;
+					move++;
+				}
+				System.out.println();
+			}
+			//*** these two for loops print the array
+			for(int k = 0; k < rowNumber; k++)
+			{
+				for(int j = 0; j < collumnNumber; j++)
+				{
+					move =array[k][j];
+					if(move < 10)
+						System.out.print(  " ");
+					System.out.print( move + " ");
+					move++;
+				}
+				System.out.println();
+			}
+			System.out.println("          Would you like to create a new array?");
+			System.out.println("          Please choose yes/no");
+			scan.nextLine();//enter key
+			choice = scan.nextLine();
+
+		}
+
+	}
+}

@@ -1,0 +1,165 @@
+Terms for Java 201
+
+2 activation frame  in recursion; stack frame which is put on the stack and holds a snapshot of the current process; to include the return address, local variables and pending results
+1 abstract data type objects (data) and the defined operations on them.  A java class is used to create an ADT
+1 accessor method method included in a class to allow non member methods or programs access to a copy of the private instance variables of the class
+1 algorithm set of steps which when followed give a solution to a problem
+1 argument value sent into a method 
+1 arithmetic operators + -   %
+1 array data structure which has more than one variable assigned to one user identifier.  Each variable of the structure is accessed by a subscript 
+1 ASCII- Unicode  mapping of the set of characters to integers that can be stored in the computer.
+1 assignment compatibilities Java’s ability to put variables with smaller storage sizes into variables with the same size or larger storage sizes.  
+1 assignment operator operator = which is used to assign a value to an object.
+1 assignment statement statement setting a variable to a value
+1 automatic type conversion Java will attempt to convert one variable storage to another according to rules of assignment compatibilities. 
+1 automatic garbage collection Java's process of identifying and removing dynamically allocated memory that is no longer in use
+2 base case recursive out or stopping case for a recursive method 
+2 base class class from which other classes are derived 
+2 base type type of variable in an array
+2 binary file file of binary data
+1 binary operators operators needing two operands such as + -   %
+1 block Java code enclosed in braces
+1 boolean expression an expression that evaluates to true or false
+1 bottom-up testing testing small portions of the program using stubs
+1 boundary value  value which tests the program at a logical changing point 
+1 break statement used to leave a loop before the loop is finished
+2 catch block code to trap an exception
+1 class mechanism to create programmer defined abstract data types
+1 parameter a place holder that is filled with an argument when a method is called.  It is listed in the heading if the method and used in the body of the method definition.  When a class is the parameter type a address to the class is sent and therefore changes made to the class in the method are made to the argument as well.
+1 comments non-executing text which programmer inserts in the program to explain and document the code.   two slashes start a one line comment.   multi –line text between slash star and star slash is a comment  
+1 compilation converting high level language program into machine-language
+1 compiler a program which converts high level language into machine-language
+1 compound statements more than one statement enclosed in braces
+1 concatenation putting two strings together to form one
+1 concatenation operator the operator + which concatenates two strings
+1 constant a variable or number whose value can not change in the course of the program execution. The identifier is usually in capital letters.
+1 constructor a member method used to initialize private data of the class at the point of declaration.
+1 constructor, default a member method used to initialize private data of the class when client does not specify value(s)
+1 constructor, explicit a member method used to initialize private data of the class when client does specify value(s)
+1 debugging removing syntax, run-time and logical error from a program
+1 declaration identifying the data type of a variable to the compiler
+1 decrement operator operator used to decrement the variable by one
+2 derived class a class which inherits features from its parent
+1 desk check checking algorithm correctness with data before coding.
+1 divide and conquer method of problem solving which breaks the problem into smaller pieces to make it easier to solve
+1 dot operator operator used to connect an object with its member methods
+1 driver program program used to test a method
+2 dynamic binding determining the meaning of code at run time rather than at compile time.
+2 encapsulation combining objects and their operations into a class.  This promotes information hiding. 
+1 escape sequence or escape characters override the meaning of the code to allow for insertion of carriage returns, quote characters and other special characters. 
+1 execute to run a program
+1 executable statement line of code which ends with a ;
+2 exception handling program can detect and respond to extraordinary events in code
+1 expression a sequence of one or more objects called operands, and zero or more operators that combine to produce a value.
+2 extends key word indicting a class is derived from another
+1 floating-point type numbers with a decimal point
+2 final keyword indicating a method can not be overridden
+1 parameter placeholder in a method used to stand in for the argument
+1 fundamental type built in types provided by the language; int, char, and double are fundamental types also known as primitive types
+2 head node first node in a liked list
+1 high-level language programming language which is easy to read and write
+1 IO input and output
+1 identifier programmer created name of a variable 
+1 increment operator operator used to increment a variable by one
+1 infinite loop loop which has no exit
+2 information hiding creating a method which can be used without knowledge of its design or implementation 
+2 inherit to get the same member methods of parent class
+1 initialize give a value to a variable at its declaration
+2 inner class class defined inside of another class, making it for the private use of the outer class
+1 instance variables data items declared in a class
+1 instantiate create a variable of some class and give it memory  
+1 iteration one repetition of a loop block
+2 iterator object used to work through a list of data
+1 implementation of ADT definition of methods in abstract data type
+1 increment adding one to a variable during processing, usually in a loop.
+1 increment operator operator that adds one to a variable.
+1 index reference to an individual variable in an array also called subscript
+1 integer type whole number, one without a decimal point
+2 invoke running or calling a method. 
+1 key word  word reserved by Java which can not be used as an identifier
+1 library prewritten programs available to the programmer for use in his or her programs
+2 linked list ADT which logically is made up of nodes with a pointer and each node is connected to the next node by this pointer 
+1 local variable variable which can be seen in the block it is declared.
+1 logic error error not caught by the compiler, also called semantic errors
+1 logical operators operators used in a logical expression, = =   ==
+1 loop programming mechanism to control repeated execution of a block of code
+1 loop control variable  variable used to control a loop 
+1 method operations of actions that an object can take
+1 method invocation the act of calling a method
+1 method call invocation of a method, running the method
+1 method definition the code of the method 
+1 mutator method method included in a class to allow non member methods or programs to change the private instance variable value of the class in appropriate ways under the control of the class who owns the private instance variable
+1 nested loop a loop within a loop
+1 new operator returns an address pointing to a new object in memory 
+2 node data object which has a pointer.  This pointer can point to another instance of the object. 
+1 null constant pointer value indicating no memory being pointed to. 
+1 object a user defined variable that has methods as well as data associated with it
+1 object-oriented design modeling objects through classes and inheritance.
+1 off-by-one error loop which misses the number of repetitions by one
+1 overflow surpassing the capacity of a given variable representation.
+1 overloading having two or more methods definitions with the same method name
+2 override derived class redefines the base class method
+2 parameter a place holder that is filled with an argument when a method is called.  It is listed in the heading of the method and used in the body of the method definition.
+1 Polymorphism means “many forms.” The use of one user identifier to mean different things
+1 posttest loop test exit condition at end of loop (do while)
+1 post-condition states that which is assumed to be true after the method is called describing returned value and any changes to arguments 
+1 pre-condition states that which is assumed to be true before the method has executed.
+1 precedence rules default order in which operators are performed 
+1 pretest loop test exit condition at beginning of loop (for loop)
+1 primitive type types built into the language like int, double, and char
+2 private  code or object that is inaccessible to the client program
+2 private member variable variables which cannot be directly accessed by the client program
+1 private member method method which cannot be directly accessed by the client program but only in the class it is defined in
+1 program a set of programmer written instructions for the computer to follow
+1 procedural abstraction  creating methods which hide the implementation from the client but give good user interface so the client can use the method
+1 pseudocode Java like code and English statements used to write the program’s algorithm
+1 public modifier to a method of instance variable that indicates that it the method or instance variable can be accessed by any outside program 
+2 recursive a method which calls itself
+1 relational operators  operators used in a logical expression = = ==  
+1 relational expression expression which evaluates to true or false
+1 repetition one of the fundamental control mechanisms which repeats a block of code
+1 reserved word or keyword words with pre-defined meaning which can not be used as user identifier
+1 return value value returned by method
+1 robust program which does not crash because it tests input for correctness
+1 run-time errors errors caught by the computer when the program is running
+1 scientific notion method of writing large floating point numbers which breaks the number into two parts the mantissa and exponent 
+1 scope the block of code where a variable can be seen
+1 selection also known as branching, one of the fundamental control mechanisms used to choose a logical path
+1 self-documenting code choosing descriptive variable names to aid in program understanding
+1 sentinel end-of-data marker, indicating end of loop
+1 sequence one of the fundamental control mechanisms, execution of instructions one after another with no branching or repetition
+1 side effect changes made to variables indirectly
+1 software programs
+1 software life cycle process which describes the creation of large programs
+1 source code program written in a high-level language
+2 stack data structure used by the computer to keep track of recursion
+2 stack frame used in recursion; activation frame which is put on the stack and holds a snapshot of the current process; to include the return address, local variables and pending results
+1 static method method that can be invoked without using an object to reference it. The modifier static is used to distinguish a static method
+1 stepwise refinement method of problem solving which breaks the problem into smaller pieces to make it easier to solve
+2 stopping case recursive out or base case for a recursive method 
+1 string a sequence of characters
+1 stubs simplified methods used to test parts of a program 
+1 subscript reference to an individual variable in an array also called index
+2 super key word indicating a call to the base class constructor for initialization of private data
+1 syntax error problem with a program’s grammar
+2 text file file of ASCII characters
+1 this underlying name of object
+2 throw statement code indicating an error to be caught by a catch block
+1 top-down design method of problem solving which breaks the problem into smaller pieces to make it easier to solve
+1 tracing important debugging and programming tool, which consists of doing a desk check on code; following the logical path of the code.
+2 try block block of code in which an exception may be detected
+1 type cast force the computer to change a variable to fit in another variable of a different type
+1 two dimensional arrays see for syntax, see for parameters
+1 unary operator operator which takes only one operand
+1 un-initialized variable which has not yet been given a value
+1 user-friendly program which provides a good user interface
+1 user interface provides the client the necessary information to use the program or method
+1 variable user created identifier to hold an object which can change during the course of the program
+1 variable declaration telling the computer to create a memory location for an object.
+1 void method method which does not return a value 
+2 wrapper class class provided by Java for each of the primitive types that provide useful methods to manipulate the primitive types.  Integers have MAX_VALUE and MIN_VALUE built into the wrapper class. 
+1
+
+
+2
+

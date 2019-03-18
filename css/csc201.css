@@ -1,0 +1,51 @@
+/*GLOBAL*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: "Trebuchet MS"
+
+}
+
+/*TITLE*/
+
+.title {
+    height: 80px;
+    text-align: center;
+    background-color: rgb(218, 99, 93);
+    padding-top: 10px;
+}
+
+/*CONTENT*/
+
+.content {
+    width: 98vw;
+    margin: 10px 0px 0px 23px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 200px));
+    grid-auto-rows: 50px;
+    grid-gap: 5px;
+}
+
+.content a {
+    text-decoration: none;
+    color: rgb(78, 78, 86);
+}
+
+.content a div{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(220, 208, 192);
+    display: grid;
+    align-items:center;
+}
+.content a div:hover{
+    background-color: rgb(218, 99, 93);
+    color: white;
+}
+

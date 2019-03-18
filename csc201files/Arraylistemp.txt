@@ -1,0 +1,61 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+public class ArrayListTemperatureAndBottleDemo
+{
+	public static void main(String[] args)
+	{
+		ArrayList<Temperature> tempArray = new ArrayList<Temperature>();
+		ArrayList<Bottle> bottleArray = new ArrayList<Bottle>();
+		Bottle b = new Bottle(3);//*** Bottle b is initialized with 3
+		tempArray.add(new Temperature(100,'C'));//*** ArrayList tempArray grows as needed
+		tempArray.add(new Temperature(100,'F'));
+		tempArray.add(new Temperature(400,'K'));
+		tempArray.add(new Temperature(200,'F'));
+		bottleArray.add(new Bottle(2));//*** ArrayList bottleArray grows as needed
+		bottleArray.add(b);
+		String temperatures = "";
+		for(Temperature temperature: tempArray)//*** for each loop goes through
+		{//*** ArrayList tempArray one at a time.
+			temperatures = temperatures + temperature.toString() + "\n";//*** a String is created
+		}//*** using the toString() method of the Temperature class
+		System.out.println("first array\n" + temperatures);//*** the String is printed
+		tempArray.clear();//*** the ArrayList tempArray is emptied 
+		//*** method practice() is called returning an array assigned to tempArray
+		tempArray = practice(bottleArray);
+		temperatures = "";
+		for(Temperature temperature: tempArray)//*** for each loop again goes through
+		{//*** ArrayList tempArray one at a time.
+			temperatures = temperatures + temperature.toString() + "\n";//*** a String is created
+				//*** using the toString() method of the Temperature class
+		}
+		System.out.println("second array\n" + temperatures);//*** the String is printed
+		readString();//*** creating a Scanner that scans a String
+	}
+
+	private static ArrayList<Temperature> practice(ArrayList<Bottle> bottleArray)
+	{//*** ArrayList tempArray is created and will be returned
+		ArrayList<Temperature> tempArray = new ArrayList<Temperature>();
+		int degree;
+		Temperature f ;
+		for(Bottle bottle: bottleArray)//*** work through bottleArray
+		{
+			degree = bottle.getNumUnits();
+			
+			f = new Temperature(degree, 'F');//*** MUST create a Temperature with new
+			tempArray.add(f);//*** ArrayList grows as needed.
+		}
+		return tempArray;
+	}
+
+	private static void readString()
+	{
+		String example ="1  5 14 9";	
+
+		Scanner scanLine = new Scanner(example);
+		while(scanLine.hasNextInt())
+		{
+			int choice = scanLine.nextInt();
+			System.out.println("choice is " + choice);
+		}
+	}
+}

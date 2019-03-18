@@ -1,0 +1,33 @@
+public class NameDemo
+{
+	public static void main(String[] args)
+	{
+		Name brother = new Name( );
+		Name schoolFriend = new Name( );
+		Name neighbor = new Name( );
+		System.out.println("Enter your brother's name.");
+		brother.readName( );
+		System.out.println("Enter your school friend's name.");
+		schoolFriend.readName( );
+		System.out.println("Enter your neighbor's name.");
+		neighbor.readName( );
+		System.out.println(" Your neighbor's middle name is "
+				+ neighbor.getMiddleName());
+		System.out.println(" Your brother's name is " + brother);
+		if(neighbor.equals(brother))
+		{
+			System.out.println(" Your neighbor's name is the " +
+					"same as your brother's name! " );
+		}
+		else
+		{
+			System.out.println(" Your neighbor's name is not the" +
+					" same as your brother's name! " );
+		}
+
+		schoolFriend = brother.add(neighbor);
+		System.out.println("your brother's name added to your" +
+							" neighbor's name is " + 							schoolFriend);
+
+	}
+}

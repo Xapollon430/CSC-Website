@@ -1,0 +1,61 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+public class ArrayListFractionAndBottleDemo
+{
+	public static void main(String[] args)
+	{
+		ArrayList<Fraction> fracArray = new ArrayList<Fraction>();
+		ArrayList<Bottle> bottleArray = new ArrayList<Bottle>();
+		Bottle b = new Bottle(3);//*** Bottle b is initialized with 3
+		fracArray.add(new Fraction(1,2));//*** ArrayList fracArray grows as needed
+		fracArray.add(new Fraction(1,3));
+		fracArray.add(new Fraction(1,5));
+		fracArray.add(new Fraction(1,6));
+		bottleArray.add(new Bottle(2));//*** ArrayList bottleArray grows as needed
+		bottleArray.add(b);
+		String fractionString = "";
+		for(Fraction fraction: fracArray)//*** for each loop goes through
+		{//*** ArrayList fracArray one at a time.
+			fractionString = fractionString + fraction.toString() + "\n";//*** a String is created
+		}//*** using the toString() method of the Fraction class
+		System.out.println("first array\n" + fractionString);//*** the String is printed
+		fracArray.clear();//*** the ArrayList fracArray is emptied 
+		//*** method practice() is called returning an array assigned to fracArray
+		fracArray = practice(bottleArray);
+		fractionString = "";
+		for(Fraction fraction: fracArray)//*** for each loop again goes through
+		{//*** ArrayList fracArray one at a time.
+			fractionString = fractionString + fraction.toString() + "\n";//*** a String is created
+				//*** using the toString() method of the Fraction class
+		}
+		System.out.println("second array\n" + fractionString);//*** the String is printed
+		readString();//*** creating a Scanner that scans a String
+	}
+
+	private static ArrayList<Fraction> practice(ArrayList<Bottle> bottleArray)
+	{//*** ArrayList fracArray is created and will be returned
+		ArrayList<Fraction> fracArray = new ArrayList<Fraction>();
+		int num, den;
+		Fraction f ;
+		for(Bottle bottle: bottleArray)//*** work through bottleArray
+		{
+			num = bottle.getNumUnits();
+			den = num + 2;
+			f = new Fraction(num, den);//*** MUST create a fraction with new
+			fracArray.add(f);//*** ArrayList grows as needed.
+		}
+		return fracArray;
+	}
+
+	private static void readString()
+	{
+		String example ="1  5 14 9";	
+
+		Scanner scanLine = new Scanner(example);
+		while(scanLine.hasNextInt())
+		{
+			int choice = scanLine.nextInt();
+			System.out.println("choice is " + choice);
+		}
+	}
+}

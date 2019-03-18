@@ -1,0 +1,142 @@
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Scanner;
+public class CreateHomeListMain
+{
+	public static void main(String[] args)
+	{
+		//*** these lines print to a file and shows where to put listing files
+		// PrintWriter outStream = TextFileIO.createTextWrite("out.txt");
+		// outStream.println("hi");
+		// System.out.println("hi");
+		// outStream.close();
+		RealEstateAgent myAgent = new RealEstateAgent();
+		Scanner scan = new Scanner(System.in);
+		System.out.println("I make lists.");
+		System.out.println("Would you like to create a list?");
+		System.out.println("Enter yes or no.");
+		String choice = scan.nextLine();
+		while(choice.equalsIgnoreCase("yes"))
+		{
+			String theHomeList = myAgent.listingsChosen();
+			System.out.println(theHomeList);
+			System.out.println("Would you like to create a new list”);
+			System.out.println("Enter yes or no.");
+			choice = scan.nextLine();
+		}// while
+		System.out.println("Thank you for creating lists.");
+	
+	}
+}
+import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.Scanner;
+public class RealEstateAgent //*** this is the largest class
+{
+	//*** ArrayLists that I used.
+	private ArrayList<Agency> agencyArray = new ArrayList<Agency>();	
+	private ArrayList<RealEstateListing> listingsFromOneAgency = new ArrayList<RealEstateListing>();
+	private ArrayList<RealEstateListing> finalArrayListOfRealEstateListings = new 
+ArrayList<RealEstateListing>();
+	private String answerSoFar = "";
+	private Agency century21 = null;
+	private Agency reMax = null;
+	private Agency mcEnearney = null;
+	private Agency longAndFoster = null;
+
+	public RealEstateAgent()
+	{	
+       Create real-estate companies here.  
+       Give them a name and pass in their text file. 
+       Here is the code.
+       century21 = new Agency("Century 21","Century21.txt");
+	}
+	public String listingsChosen()
+	{
+		getAgenciesForTheExhibition();//*** this is an ArrayList
+		//*** I read a String and used a Scanner instance to scan a string 
+       //*** for the integers integers. See handout for an example of this.
+		homeCriterion = pickHomeCriterion();
+		switch (homeCriterion)
+		{
+		case 1:// Style
+			int style = getStyle();
+			finalArrayListOfRealEstateListings = style(style, agencyArray);
+			break;
+		
+		default:
+			System.out.println("bad topic Selection choice " + homeCriterion);
+			System.exit(0);
+		}// switch
+	//*** I have a method that creates a string of the agencies used.
+	//*** I have a method that takes the final list of homes  
+	//*** and puts them in a string that is returned. 
+
+	
+	public int getStyle()
+	{
+	}
+	public ArrayList<RealEstateListing> style(int styleType, ArrayList<Agency> agencyArray)
+	{
+       //*** ask each agency to give a list that satisfies the requested style.
+	}
+
+       //*** For each criteria there are similar pairs of methods.	
+	//*** Work on each pair one pair at a time and make them 
+       //*** work before you do the next pair.
+}
+
+
+
+
+import java.util.ArrayList;
+import java.util.Scanner;
+public class Agency
+{
+	private String agency;
+	private ArrayList<RealEstateListing> realEstateListingArray = new ArrayList<RealEstateListing>();
+	public Agency(String agency, String agencyFile)
+	{
+	//***	Constructor reads its file into an ArrayList
+	//*** don’t forget to close the Scanner
+//*** Here is the code to read a file
+      this.agency = agency; 
+	Scanner scanAgencyFile =                                                                TextFileIO.createTextRead(agencyFile);
+		readFile(scanAgencyFile);
+		scanAgencyFile.close();
+       }
+	public void readFile(Scanner read)
+	{	
+	//*** The first number in the file is the number of listings.
+	//*** This sets the for loop
+	//***	A RealEstateListing can read itself. 		
+	}
+		
+	public ArrayList<RealEstateListing> style(String desiredStyle)
+	{
+	//*** Creates an ArrayList of for this criteria. 	
+	//*** Each criteria creates a list.	
+	}	
+
+
+
+public class RealEstateListing
+{
+       //*** instance variables go here.
+	
+	public void readRealEstateListing(Scanner read)
+	{
+		//*** Read a listing.
+		//*** Set the instance variables. 		
+	}
+	//*** I have a complete set of getters and setters created by Eclipse
+	
+	public String toString()
+	{
+		
+	}
+}
+
+3
+
+
